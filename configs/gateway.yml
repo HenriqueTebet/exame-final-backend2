@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1048508661293-ntkfklp1cd3vfoluhv13lip080r1uouo.apps.googleusercontent.com
+            client-secret: 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
+            scope: openid
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: circuitbreakers,circuitbreakerevents,health,info,actuator
